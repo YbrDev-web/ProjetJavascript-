@@ -3,53 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <title>Bibliothèque en Ligne</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS personnalisé -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
   <div class="container my-5">
-    <h1 class="text-center mb-4">Ma Bibliothèque en Ligne</h1>
+    <!-- Titre principal -->
+    <h1 class="text-center mb-4">📚 Ma Bibliothèque en Ligne</h1>
 
+    <!-- 🧾 Formulaire d'ajout d'un livre -->
     <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Ajouter un nouveau livre</h5>
-          <form id="form-ajout-livre" class="row g-3">
-            <div class="col-md-4">
-              <input type="text" class="form-control" id="titre" placeholder="Titre du livre" required>
-            </div>
-            <div class="col-md-4">
-              <input type="text" class="form-control" id="auteur" placeholder="Auteur" required>
-            </div>
-            <div class="col-md-4">
-                <button type="submit" class="btn btn-primary w-100">Ajouter</button>
-            </div>
+      <div class="card-body">
+        <h5 class="card-title">➕ Ajouter un nouveau livre</h5>
+        <form id="form-ajout-livre" class="row g-3">
+          <!-- Titre -->
+          <div class="col-md-4">
+            <input type="text" class="form-control" id="titre" placeholder="Titre du livre" required>
+          </div>
+
+          <!-- Auteur -->
+          <div class="col-md-4">
+            <input type="text" class="form-control" id="auteur" placeholder="Auteur" required>
+          </div>
+
+          <!-- Nombre de pages -->
+          <div class="col-md-4">
+            <input type="number" class="form-control" id="pages" placeholder="Nombre de pages">
+          </div>
+
+          <!-- Image (URL) -->
+          <div class="col-md-6">
+            <input type="url" class="form-control" id="image" placeholder="URL de l'image de couverture">
+          </div>
+
+          <!-- Description -->
+          <div class="col-md-6">
+            <textarea class="form-control" id="description" rows="1" placeholder="Description courte..."></textarea>
+          </div>
+
+          <!-- Bouton d'ajout -->
+          <div class="col-12 text-end">
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+          </div>
         </form>
-        </div>
+      </div>
     </div>
 
+    <!-- 🔎 Barre de recherche -->
     <div class="mb-4">
-        <input type="text" id="recherche" class="form-control" placeholder="Rechercher un livre par titre ou auteur...">
-      </div>
-      
+      <input type="text" id="recherche" class="form-control" placeholder="Rechercher un livre par titre ou auteur...">
+    </div>
+
+    <!-- 📚 Colonnes de livres -->
     <div class="row">
-      <!-- Colonne À lire -->
+      <!-- À lire -->
       <div class="col-md-4">
-        <h3>À lire</h3>
+        <h3>📖 À lire</h3>
         <div id="a-lire" class="book-column bg-light p-3 rounded min-vh-50"></div>
       </div>
-      <!-- Colonne En cours -->
+
+      <!-- En cours -->
       <div class="col-md-4">
-        <h3>En cours</h3>
+        <h3>⏳ En cours</h3>
         <div id="en-cours" class="book-column bg-light p-3 rounded min-vh-50"></div>
       </div>
-      <!-- Colonne Lu -->
+
+      <!-- Lu -->
       <div class="col-md-4">
-        <h3>Lu</h3>
+        <h3>✅ Lu</h3>
         <div id="lu" class="book-column bg-light p-3 rounded min-vh-50"></div>
       </div>
     </div>
   </div>
 
+  <!-- 🪟 Modal pour afficher les détails d’un livre -->
   <div class="modal fade" id="livreModal" tabindex="-1" aria-labelledby="livreModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -64,7 +97,10 @@
     </div>
   </div>
 
+  <!-- JS personnalisé -->
   <script src="script.js"></script>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
