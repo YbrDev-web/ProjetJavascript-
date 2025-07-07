@@ -2,11 +2,12 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f7f9;
+  background-color: #f5f7f9; /* ✅ Couleur de fond sobre et professionnelle */
   color: #2c3e50;
   margin: 0;
   padding: 0;
 }
+
 
 /* ---------- TITRES ---------- */
 
