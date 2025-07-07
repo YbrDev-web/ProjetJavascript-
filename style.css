@@ -1,134 +1,169 @@
 /* ---------- BASE ---------- */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    color: #2c3e50;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* ---------- TITRES ---------- */
-  
-  h1, h2, h3 {
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  /* ---------- FORMULAIRE ---------- */
-  
-  .card {
-    background-color: white;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    padding: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .form-label {
-    font-weight: 600;
-    margin-bottom: 5px;
-    display: block;
-    color: #333;
-  }
-  
-  .form-control, .form-select {
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    padding: 8px;
-    width: 100%;
-  }
-  
-  textarea.form-control {
-    resize: vertical;
-    min-height: 120px;
-  }
-  
-  /* ---------- BOUTONS ---------- */
-  
-  .btn {
-    padding: 10px 20px;
-    font-weight: 600;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background-color: #007BBD;
-    color: white;
-  }
-  
-  .btn-primary:hover {
-    background-color: #006aa3;
-  }
-  
-  /* ---------- COLONNES ---------- */
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7f9;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- TITRES ---------- */
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #004785;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ---------- FORMULAIRE ---------- */
+
+.card {
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.form-control, .form-select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ---------- BOUTONS ---------- */
+
+.btn {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2C87C5;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1a6aa3;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* ---------- COLONNES ---------- */
+
+.book-column {
+  background-color: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 15px;
+  min-height: 400px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: background 0.2s ease;
+}
+
+.book-column.dragover {
+  background-color: #e6f2ff;
+  border: 2px dashed #2C87C5;
+}
+
+/* ---------- LIVRES ---------- */
+
+.book-card {
+  background-color: #ffffff;
+  border-left: 5px solid #2C87C5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.book-card:hover {
+  background-color: #f0faff;
+  transform: translateY(-2px);
+}
+
+/* ---------- MODALE ---------- */
+
+.modal-content {
+  border-radius: 6px;
+}
+
+.modal-header {
+  background-color: #2C87C5;
+  color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.modal-body img {
+  float: right;
+  max-width: 140px;
+  margin: 0 0 10px 20px;
+  border-radius: 4px;
+}
+
+/* ---------- RECHERCHE ---------- */
+
+#recherche {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
   .book-column {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 15px;
-    min-height: 400px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
   }
-  
-  /* ---------- LIVRES ---------- */
-  
-  .book-card {
-    background-color: #fafafa;
-    border-left: 5px solid #007BBD;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+
+  .modal-body img {
+    float: none;
+    display: block;
+    margin: 0 auto 10px auto;
   }
-  
-  .book-card:hover {
-    background-color: #f0f8ff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  }
-  
-  /* ---------- DRAG & DROP ---------- */
-  
-  .book-column.dragover {
-    background-color: #e1f5fe;
-    border: 2px dashed #007BBD;
-  }
-  
-  /* ---------- MODALE ---------- */
-  
-  .modal-content {
-    border-radius: 6px;
-  }
-  
-  .modal-header {
-    background-color: #007BBD;
-    color: white;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .modal-title {
-    font-weight: bold;
-  }
-  
-  /* ---------- RESPONSIVE ---------- */
-  
-  @media (max-width: 768px) {
-    .book-column {
-      margin-bottom: 20px;
-    }
-  }
-  
+}
