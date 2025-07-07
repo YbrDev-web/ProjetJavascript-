@@ -180,5 +180,37 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
       });
     }
+
+      // === FORMULAIRE : Ajout d'un nouveau livre ===
+  const formAjout = document.getElementById("form-ajout-livre");
+
+  if (formAjout) {
+    formAjout.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const titre = document.getElementById("titre").value.trim();
+      const auteur = document.getElementById("auteur").value.trim();
+
+      if (!titre || !auteur) {
+        alert("Veuillez remplir les deux champs !");
+        return;
+      }
+
+      const nouveauLivre = {
+        isbn: `user-${Date.now()}`,
+        title: titre,
+        author: auteur,
+        colonne: "a-lire",
+        note: null,
+        commentaire: ""
+      };
+
+      livres.push(nouveauLivre);
+      saveLivres(livres);
+      afficherLivres(livres);
+      formAjout.reset(); // Vide les champs
+    });
+  }
+
   });
   
