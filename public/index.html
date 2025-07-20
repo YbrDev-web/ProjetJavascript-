@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bibliothèque en Ligne</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Ma Bibliothèque en Ligne</h1>
+
+    <!-- Bouton d'ouverture de la modale -->
+    <div class="text-end mb-4">
+      <button id="ouvrir-modal-ajout" class="btn btn-primary">+ Ajouter un livre</button>
+    </div>
+
+    <!-- Champ de recherche -->
+    <div class="mb-4">
+      <input type="text" id="recherche" class="form-control" placeholder="Rechercher un livre par titre ou auteur...">
+    </div>
+
+    <!-- Colonnes de livres -->
+    <div class="row">
+      <div class="col-md-4">
+        <h3>À lire</h3>
+        <div id="a-lire" class="book-column bg-light p-3 rounded min-vh-50"></div>
+      </div>
+      <div class="col-md-4">
+        <h3>En cours</h3>
+        <div id="en-cours" class="book-column bg-light p-3 rounded min-vh-50"></div>
+      </div>
+      <div class="col-md-4">
+        <h3>Lu</h3>
+        <div id="lu" class="book-column bg-light p-3 rounded min-vh-50"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔽 Modale personnalisée d’ajout -->
+  <div id="modal-ajout" class="modal-overlay">
+    <div class="custom-modal-content">
+      <h5 class="mb-3">Ajouter un nouveau livre</h5>
+      <form id="form-ajout-livre">
+        <div class="mb-3">
+          <label for="titre" class="form-label">Titre</label>
+          <input type="text" class="form-control" id="titre" required>
+        </div>
+        <div class="mb-3">
+          <label for="auteur" class="form-label">Auteur</label>
+          <input type="text" class="form-control" id="auteur" required>
+        </div>
+        <div class="mb-3">
+          <label for="sousTitre" class="form-label">Sous-titre</label>
+          <input type="text" class="form-control" id="sousTitre">
+        </div>
+        <div class="mb-3">
+          <label for="pages" class="form-label">Pages</label>
+          <input type="number" class="form-control" id="pages" min="1">
+        </div>
+        <div class="mb-3">
+          <label for="published" class="form-label">Date de publication</label>
+          <input type="date" class="form-control" id="published">
+        </div>
+        <div class="mb-3">
+          <label for="editeur" class="form-label">Éditeur</label>
+          <input type="text" class="form-control" id="editeur">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" rows="4"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="lien" class="form-label">Lien (site officiel)</label>
+          <input type="url" class="form-control" id="lien">
+        </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-success">Ajouter</button>
+          <button type="button" class="btn btn-secondary" id="fermer-modal-ajout">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 🔽 Modale de détails de livre -->
+  <div class="modal fade" id="livreModal" tabindex="-1" aria-labelledby="livreModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="livreModalLabel">Détails du livre</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body" id="contenuModal">
+          <!-- contenu injecté dynamiquement -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // JS pur pour ouverture/fermeture modale personnalisée
+    document.addEventListener("DOMContentLoaded", () => {
+      const btnOuvrir = document.getElementById("ouvrir-modal-ajout");
+      const btnFermer = document.getElementById("fermer-modal-ajout");
+      const modal = document.getElementById("modal-ajout");
+
+      btnOuvrir.addEventListener("click", () => {
+        modal.style.display = "flex";
+      });
+
+      btnFermer.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
