@@ -16,20 +16,6 @@
     "commentaire": ""
   },
   {
-    "isbn": "9781449331818",
-    "title": "Learning JavaScript Design Patterns",
-    "subtitle": "A JavaScript and jQuery Developer's Guide",
-    "author": "Addy Osmani",
-    "published": "2012-08-30T00:00:00.000Z",
-    "publisher": "O'Reilly Media",
-    "pages": 254,
-    "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
-    "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/",
-    "colonne": "a-lire",
-    "note": null,
-    "commentaire": ""
-  },
-  {
     "isbn": "9781593279509",
     "title": "Eloquent JavaScript, Third Edition",
     "subtitle": "A Modern Introduction to Programming",
@@ -126,6 +112,20 @@
     "title": "L'Odysée",
     "author": "Homère",
     "colonne": "en-cours",
+    "note": null,
+    "commentaire": ""
+  },
+  {
+    "isbn": "9781449331818",
+    "title": "Learning JavaScript Design Patterns",
+    "subtitle": "A JavaScript and jQuery Developer's Guide",
+    "author": "Addy Osmani",
+    "published": "2012-08-30T00:00:00.000Z",
+    "publisher": "O'Reilly Media",
+    "pages": 254,
+    "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
+    "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/",
+    "colonne": "a-lire",
     "note": null,
     "commentaire": ""
   }
