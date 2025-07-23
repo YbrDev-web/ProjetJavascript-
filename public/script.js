@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const createCard = (livre) => {
     const carte = document.createElement("div");
-    carte.className = "book-card mb-2 p-2 border rounded bg-white";
+    carte.className = "book-card mb-2 p-2 border rounded";
     
     // Amélioration du contenu de la carte
     const starsHtml = livre.note ? `
