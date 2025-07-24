@@ -30,28 +30,6 @@
     "commentaire": ""
   },
   {
-    "isbn": "manuel-1752152959152",
-    "title": "test",
-    "author": "test",
-    "colonne": "a-lire",
-    "note": null,
-    "commentaire": ""
-  },
-  {
-    "isbn": "manuel-1752156079707",
-    "title": "lolo",
-    "author": "lolo",
-    "subtitle": "lolo",
-    "pages": 109,
-    "published": "2025-07-22",
-    "publisher": "lolo",
-    "description": "lollo",
-    "website": "https://anime-sama.fr/catalogue/one-piece/scan_noir-et-blanc/vf/",
-    "colonne": "a-lire",
-    "note": null,
-    "commentaire": ""
-  },
-  {
     "isbn": "9781484200766",
     "title": "Pro Git",
     "subtitle": "Everything you neeed to know about Git",
@@ -80,20 +58,6 @@
     "commentaire": ""
   },
   {
-    "isbn": "9781449331818",
-    "title": "Learning JavaScript Design Patterns",
-    "subtitle": "A JavaScript and jQuery Developer's Guide",
-    "author": "Addy Osmani",
-    "published": "2012-08-30T00:00:00.000Z",
-    "publisher": "O'Reilly Media",
-    "pages": 254,
-    "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
-    "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/",
-    "colonne": "en-cours",
-    "note": null,
-    "commentaire": ""
-  },
-  {
     "isbn": "manuel-1751893881321",
     "title": "L'Odysée",
     "author": "Homère",
@@ -102,6 +66,28 @@
     "commentaire": ""
   },
   {
+    "isbn": "manuel-1752156079707",
+    "title": "lolo",
+    "author": "lolo",
+    "subtitle": "lolo",
+    "pages": 109,
+    "published": "2025-07-22",
+    "publisher": "lolo",
+    "description": "lollo",
+    "website": "https://anime-sama.fr/catalogue/one-piece/scan_noir-et-blanc/vf/",
+    "colonne": "a-lire",
+    "note": 4,
+    "commentaire": ""
+  },
+  {
+    "isbn": "manuel-1752152959152",
+    "title": "test",
+    "author": "test",
+    "colonne": "a-lire",
+    "note": 1,
+    "commentaire": ""
+  },
+  {
     "isbn": "9781449331818",
     "title": "Learning JavaScript Design Patterns",
     "subtitle": "A JavaScript and jQuery Developer's Guide",
@@ -111,8 +97,8 @@
     "pages": 254,
     "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
     "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/",
-    "colonne": "a-lire",
-    "note": null,
+    "colonne": "en-cours",
+    "note": 3,
     "commentaire": ""
   }
 ]
